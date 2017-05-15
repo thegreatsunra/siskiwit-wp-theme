@@ -20,7 +20,7 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_title( '<h2 class="page-title page-title-archive">', '</h2>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
@@ -38,7 +38,10 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_navigation([
+				'prev_text' => '&laquo; Older entries',
+				'next_text' => 'Newer entries &raquo;'
+			]);
 
 		else :
 

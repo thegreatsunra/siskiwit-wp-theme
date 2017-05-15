@@ -793,7 +793,11 @@ padding-left: 0;
 }
 
 .post-navigation {
+	padding-left: 10px;
 	padding-top: 10px;
+}
+
+.posts-navigation {
 	padding-left: 10px;
 }
 
@@ -843,4 +847,8 @@ padding-left: 0;
 }
 .entry-title-search {
 	padding-top: 20px;
+}
+.page-title-archive {
+	font-size: 28px;
+	padding-bottom: 25px;
 }
