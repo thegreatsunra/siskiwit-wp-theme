@@ -19,7 +19,7 @@ function siskiwit_posted_on() {
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
+		esc_html( get_the_date( 'D M n, Y') ),
 		esc_attr( get_the_modified_date( 'c' ) ),
 		esc_html( get_the_modified_date() )
 	);
@@ -34,7 +34,21 @@ function siskiwit_posted_on() {
 		// '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<li class="permalink"><span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span></li><li class="comments"></li>';
+	echo '<li class="comments">';
+	comments_number( 'no comments', 'one comment', '% comments' );
+	echo '</li>';
+	// WPCS: XSS OK.
+
+	edit_post_link(
+		sprintf(
+			/* translators: %s: Name of current post */
+			esc_html__( 'EDIT', 'siskiwit' ),
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
+		),
+		'<li class="comments">',
+		'</li>'
+	);
 
 }
 endif;
@@ -65,16 +79,6 @@ function siskiwit_entry_footer() {
 		// comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'siskiwit' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
-
-	edit_post_link(
-		sprintf(
-			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'siskiwit' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		),
-		'<span class="edit-link">',
-		'</span>'
-	);
 }
 endif;
 

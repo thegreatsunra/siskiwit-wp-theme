@@ -777,3 +777,70 @@ padding-left: 0;
 .clear {clear: both;}
 .clearL {clear: left;}
 .clearR {clear: right;}
+
+.screen-reader-text {
+	display: none;
+}
+
+.nav-previous {
+	float: left;
+	padding-bottom: 15px;
+}
+
+.nav-next {
+	float: right;
+	padding-bottom: 15px;
+}
+
+.post-navigation {
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+.comment-title {
+	clear: both;
+}
+
+.comment-author {
+	text-align: center;
+	font-size: 24px;
+}
+.comment-author b {
+	font-weight: normal;
+}
+.comment-metadata {
+	display: none;
+}
+.comment-list {
+	padding-top: 10px;
+}
+.widget-area ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+.widget-area li {
+	margin-left: 0;
+	padding-left: 10px;
+}
+.widget-title {
+	font-size: 22px;
+}
+.widget {
+	padding-bottom: 20px;
+}
+.search-form {
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.search-form input {
+	font-size: 13px;
+	padding: 4px;
+}
+.search-page-title {
+	padding-top: 10px;
+	font-size: 22px;
+}
+.entry-title-search {
+	padding-top: 20px;
+}

@@ -12,6 +12,7 @@
 <div class="entry">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<h4> <?php the_date() ?></h4>
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -39,12 +40,13 @@
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="posted">
 		<div class="entry-meta">
+			<ul>
 			<?php siskiwit_posted_on(); ?>
+			</ul>
 		</div><!-- .entry-meta -->
 		</div>
 		<?php
 		endif; ?>
-
 	<footer class="entry-footer">
 		<?php siskiwit_entry_footer(); ?>
 	</footer><!-- .entry-footer -->

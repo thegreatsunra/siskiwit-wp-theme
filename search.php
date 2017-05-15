@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div id="colOne">
 	<div id="content">
-	
+
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -19,7 +19,7 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'siskiwit' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h3 class="page-title search-page-title"><?php printf( esc_html__( 'Search results for: %s', 'siskiwit' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
 			</header><!-- .page-header -->
 
 			<?php

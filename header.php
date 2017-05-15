@@ -57,8 +57,7 @@
 <div id="nav">
 	<div id="mainNav">
 		<ul>
-			<li><a href="/" title="back to home">Home</a></li>
-			<li class="current"><a href="/weblog/" title="thoughts and stuff, updated at random">Weblog</a></li>
+			<li class="current"><a href="/" title="back to home">Home</a></li>
 			<li><a href="/photolog/" title="pictures of things that are neat">Photolog</a></li>
 			<li><a href="/sundries/" title="random links and asides from elsewhere.">Sundries</a></li>
 			<li><a href="/classics/" title="old stuff with esoteric appeal">Classics</a></li>
