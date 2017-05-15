@@ -26,13 +26,17 @@
 <div id="page" class="site">
 	<a class="hide skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'siskiwit' ); ?></a>
 
+<?php if ( is_front_page() && is_home() ) : ?>
+	<div id="header" class="header-home">
+<?php else : ?>
 	<div id="header">
+<?php endif; ?>
 	<div id="h2">
 	<header id="masthead" class="site-header" role="banner">
 		<div class="logo site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="/" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
@@ -57,10 +61,10 @@
 <div id="nav">
 	<div id="mainNav">
 		<ul>
-			<li class="current"><a href="/" title="back to home">Home</a></li>
-			<li><a href="/photolog/" title="pictures of things that are neat">Photolog</a></li>
-			<li><a href="/sundries/" title="random links and asides from elsewhere.">Sundries</a></li>
-			<li><a href="/classics/" title="old stuff with esoteric appeal">Classics</a></li>
+			<li <?php if ( get_bloginfo('name') == 'Weblog' ) : ?> class="current" <?php endif; ?>><a href="/" title="back to home">Home</a></li>
+			<li <?php if ( get_bloginfo('name') == 'Photolog' ) : ?> class="current" <?php endif; ?>><a href="/photolog/" title="pictures of things that are neat">Photolog</a></li>
+			<li <?php if ( get_bloginfo('name') == 'Sundries' ) : ?> class="current" <?php endif; ?>><a href="/sundries/" title="random links and asides from elsewhere.">Sundries</a></li>
+			<li <?php if ( get_bloginfo('name') == 'Classics' ) : ?> class="current" <?php endif; ?>><a href="/classics/" title="old stuff with esoteric appeal">Classics</a></li>
 	</ul>
 	</div><!-- end mainNav -->
 </div>
