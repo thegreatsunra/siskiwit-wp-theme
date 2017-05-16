@@ -240,9 +240,27 @@ div#colTwo {
 	}
 
 body#photolog div#main {
+	text-align: center;
 	background-color: #dbd2c2;
 	background-image: none;
-	}
+}
+
+body#photolog div#content p {
+	text-align: center;
+	padding-left: 15px;
+}
+
+body#photolog div.nav-next {
+	padding-right: 10px;
+}
+
+body#photolog div.posted {
+	display: none;
+}
+
+body#photolog header.entry-header {
+	padding-top: 20px;
+}
 
 body#photolog div#m2 {
 	background-image: none;
