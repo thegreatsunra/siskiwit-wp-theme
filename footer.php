@@ -19,7 +19,7 @@
 	<div id="footer">
 		<div id="f2">
 			<div id="footerNav">
-				<p>Copyright &copy; 2001 - 2017 Dane Petersen</p>
+				<p>Copyright &copy; 2001 - <?=date("Y", time());?> Dane Petersen</p>
 			</div>
 			<!-- end footerNav -->
 		</div><!-- end f2 -->

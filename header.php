@@ -27,7 +27,7 @@
 <div id="page" class="site">
 	<a class="hide skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'siskiwit' ); ?></a>
 
-<?php if ( is_front_page() && is_home() ) : ?>
+<?php if ( is_front_page() && is_home() && ( get_bloginfo('name') == 'Weblog' ) ) : ?>
 	<div id="header" class="header-home">
 <?php else : ?>
 	<div id="header">
@@ -39,7 +39,7 @@
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="/" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><a href="/" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
 			endif;
 
