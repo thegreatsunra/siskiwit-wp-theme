@@ -29,10 +29,11 @@ function siskiwit_posted_on() {
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
-	$byline = sprintf(
-		// esc_html_x( 'by %s', 'post author', 'siskiwit' ),
-		// '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
+	$byline = '';
+	// $byline = sprintf(
+	// 	esc_html_x( 'by %s', 'post author', 'siskiwit' ),
+	// 	'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	// );
 
 	echo '<li class="permalink"><span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span></li><li class="comments"></li>';
 	echo '<li class="comments">';
