@@ -24,13 +24,6 @@
 			<!-- end footerNav -->
 		</div><!-- end f2 -->
 	</div><!-- end footer -->
-
-	<script>
-			window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-			ga('create','UA-321702-14','auto');ga('send','pageview')
-	</script>
-	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
-
 	<footer id="colophon" class="hide site-footer" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'siskiwit' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'siskiwit' ), 'WordPress' ); ?></a>
